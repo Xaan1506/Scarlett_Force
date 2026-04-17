@@ -1,0 +1,132 @@
+export const mockEvents = [
+  {
+    id: 1,
+    title: "AI Developers Meetup",
+    description: "A small gathering of AI enthusiasts discussing the latest in machine learning algorithms, ethical AI, and agentic systems over coffee.",
+    category: "Tech",
+    tags: ["Indoor", "Small Gathering", "Tech", "Analytical", "Introvert", "Chill"],
+    date: "2026-05-10",
+    location: "New York",
+    price: "Free",
+    eventType: "Meetup",
+    image: "https://images.unsplash.com/photo-1591115765373-5207764f72e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 2,
+    title: "Outdoor Music Festival",
+    description: "An ecstatic weekend featuring local bands and electronic music artists. High energy, good vibes, and dancing under the stars.",
+    category: "Music",
+    tags: ["Outdoor", "Large Crowd", "Music", "Social", "High Energy"],
+    date: "2026-06-15",
+    location: "San Francisco",
+    price: "Paid",
+    eventType: "Party",
+    image: "https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 3,
+    title: "Art Therapy Workshop",
+    description: "A calming environment to express yourself through painting. No prior experience needed. All supplies provided.",
+    category: "Art",
+    tags: ["Indoor", "Small Gathering", "Art", "Creative", "Introvert", "Chill"],
+    date: "2026-05-22",
+    location: "Chicago",
+    price: "Paid",
+    eventType: "Workshop",
+    image: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 4,
+    title: "Tech Startup Founders Conference",
+    description: "Connect with angel investors, VC firms, and fellow founders. Includes keynote speeches passing along years of industry wisdom.",
+    category: "Networking",
+    tags: ["Indoor", "Large Crowd", "Networking", "Social", "Analytical", "Moderate"],
+    date: "2026-07-05",
+    location: "Austin",
+    price: "Paid",
+    eventType: "Conference",
+    image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 5,
+    title: "Community Park Yoga",
+    description: "Start your weekend with a refreshing outdoor yoga session. Suitable for all levels. Bring your own mat.",
+    category: "Sports",
+    tags: ["Outdoor", "Medium", "Sports", "Introvert", "Chill"],
+    date: "2026-05-18",
+    location: "Seattle",
+    price: "Free",
+    eventType: "Meetup",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 6,
+    title: "Web3 Hackathon",
+    description: "A 48-hour intensive building session. Form teams, build decentralized apps, and win prizes.",
+    category: "Tech",
+    tags: ["Both", "Medium", "Tech", "Analytical", "High Energy"],
+    date: "2026-08-10",
+    location: "Miami",
+    price: "Free",
+    eventType: "Workshop",
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 7,
+    title: "Gallery Opening Night",
+    description: "Exclusive first look at our new contemporary art exhibit. Featuring drinks, appetizers, and networking.",
+    category: "Art",
+    tags: ["Indoor", "Medium", "Art", "Creative", "Social", "Moderate"],
+    date: "2026-05-28",
+    location: "New York",
+    price: "Free",
+    eventType: "Party",
+    image: "https://images.unsplash.com/photo-1536924940846-227afb31e2a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 8,
+    title: "Mountain Biking Expedition",
+    description: "Test your endurance on challenging mountain trails. Professional guides present. Beautiful scenery guaranteed.",
+    category: "Sports",
+    tags: ["Outdoor", "Small Gathering", "Sports", "Introvert", "High Energy"],
+    date: "2026-06-05",
+    location: "Denver",
+    price: "Paid",
+    eventType: "Meetup",
+    image: "https://images.unsplash.com/photo-1528629297340-d1d466945dc5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 9,
+    title: "Creative Writing Retreat",
+    description: "A peaceful weekend retreat focused on developing your novel or poetry. Daily workshops and sharing sessions.",
+    category: "Art",
+    tags: ["Indoor", "Small Gathering", "Art", "Creative", "Introvert", "Chill"],
+    date: "2026-09-12",
+    location: "Portland",
+    price: "Paid",
+    eventType: "Workshop",
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead27d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  },
+  {
+    id: 10,
+    title: "Global Tech Expo",
+    description: "The largest technology expo of the year featuring new gadgets, software demonstrations, and massive networking opportunities.",
+    category: "Tech",
+    tags: ["Indoor", "Large Crowd", "Tech", "Analytical", "Social", "High Energy"],
+    date: "2026-10-20",
+    location: "Los Angeles",
+    price: "Paid",
+    eventType: "Conference",
+    image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }
+];
+
+export const filterCategories = {
+  environment: ["Indoor", "Outdoor", "Both"],
+  crowdSize: ["Small Gathering", "Medium", "Large Crowd"],
+  interest: ["Tech", "Music", "Sports", "Art", "Networking"],
+  personality: ["Creative", "Analytical", "Social", "Introvert"],
+  energy: ["Chill", "Moderate", "High Energy"],
+  price: ["Free", "Paid"],
+  eventType: ["Workshop", "Meetup", "Party", "Conference"]
+};
