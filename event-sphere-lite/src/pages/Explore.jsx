@@ -1,4 +1,5 @@
 import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { mockEvents, filterCategories } from '../data/events';
 import EventCard from '../components/EventCard';
 import FilterSidebar from '../components/FilterSidebar';
@@ -206,7 +207,17 @@ function ExploreMapPanel({ filteredEvents, onEventClick }) {
 function Explore() {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchQuery = searchParams.get('q') || '';
+  
+  const setSearchQuery = (value) => {
+    setSearchParams(prev => {
+      if (value) prev.set('q', value);
+      else prev.delete('q');
+      return prev;
+    }, { replace: true });
+  };
+
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [viewMode, setViewMode] = useState('grid'); // 'grid' | 'map'
 

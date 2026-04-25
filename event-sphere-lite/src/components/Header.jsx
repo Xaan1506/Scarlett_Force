@@ -1,11 +1,27 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { Sparkles, User, Search, MessageCircle, Home, Bookmark, Compass, MapPin } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { useSavedEvents } from '../context/SavedEventsContext';
 
 function Header() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const searchQuery = searchParams.get('q') || '';
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    if (location.pathname !== '/explore' && value.trim() !== '') {
+      navigate(`/explore?q=${encodeURIComponent(value)}`);
+    } else {
+      setSearchParams(prev => {
+        if (value) prev.set('q', value);
+        else prev.delete('q');
+        return prev;
+      }, { replace: true });
+    }
+  };
+
   const isHome = location.pathname === '/';
   const { conversations } = useUser();
   const { savedEventIds } = useSavedEvents();
@@ -72,6 +88,8 @@ function Header() {
               <input
                 type="text"
                 placeholder="Search events..."
+                value={searchQuery}
+                onChange={handleSearchChange}
                 className="w-full pl-11 pr-4 py-2 bg-slate-100 border-transparent focus:bg-white focus:border-emerald-500 focus:ring-2 focus:ring-emerald-200 rounded-full text-sm transition-all outline-none"
               />
             </div>
