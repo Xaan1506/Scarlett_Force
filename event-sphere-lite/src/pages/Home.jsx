@@ -2,6 +2,7 @@ import React, { useState, useMemo, useEffect } from 'react';
 import { mockEvents, filterCategories } from '../data/events';
 import EventCard from '../components/EventCard';
 import FilterSidebar from '../components/FilterSidebar';
+import EventDetailModal from '../components/EventDetailModal';
 import { Menu, X, Sparkles } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -9,6 +10,7 @@ function Home() {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedEvent, setSelectedEvent] = useState(null);
 
   // Load from local storage on mount
   useEffect(() => {
@@ -193,7 +195,7 @@ function Home() {
                 <EventCard 
                   key={event.id} 
                   event={event} 
-                  onClick={(e) => console.log('View Event:', e)} 
+                  onClick={(e) => setSelectedEvent(e)} 
                 />
               ))}
             </AnimatePresence>
@@ -220,6 +222,13 @@ function Home() {
           </motion.div>
         )}
       </div>
+
+      {/* Event Detail Modal */}
+      <EventDetailModal 
+        event={selectedEvent} 
+        isOpen={!!selectedEvent} 
+        onClose={() => setSelectedEvent(null)} 
+      />
     </main>
   );
 }
