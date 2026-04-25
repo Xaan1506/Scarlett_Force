@@ -148,6 +148,66 @@ export const mockEvents = [
     eventType: "Conference",
     image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     host: { id: "h10", name: "Nathaniel Black", avatar: "https://i.pravatar.cc/150?u=h10" }
+  },
+  {
+    id: 11,
+    title: "Pune Football Tournament",
+    description: "A 5-a-side football tournament open to all skill levels. Teams of 5 compete across 3 rounds with trophies and prizes for top 3 finishers.",
+    category: "Sports",
+    tags: ["Outdoor", "Medium", "Sports", "Social", "High Energy"],
+    date: "2026-05-15",
+    location: "Pune",
+    lat: 18.5204,
+    lng: 73.8567,
+    price: "Free",
+    eventType: "Meetup",
+    image: "https://images.unsplash.com/photo-1553778263-73a83bab9b0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    host: { id: "h11", name: "Rohan Desai", avatar: "https://i.pravatar.cc/150?u=h11" }
+  },
+  {
+    id: 12,
+    title: "Pune Speed Dating Night",
+    description: "Meet new people in a fun, pressure-free setting. 10 dates of 5 minutes each, followed by cocktails and casual mingling. Ages 22–35.",
+    category: "Networking",
+    tags: ["Indoor", "Medium", "Networking", "Social", "Chill"],
+    date: "2026-06-07",
+    location: "Pune",
+    lat: 18.5314,
+    lng: 73.8446,
+    price: "Paid",
+    eventType: "Party",
+    image: "https://images.unsplash.com/photo-1511988617509-a57c8a288659?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    host: { id: "h12", name: "Priya Kulkarni", avatar: "https://i.pravatar.cc/150?u=h12" }
+  },
+  {
+    id: 13,
+    title: "Bollywood Dance Night",
+    description: "An electrifying Bollywood-themed party night at one of Pune's top venues. Live DJ, dance floor, themed décor, and unlimited energy!",
+    category: "Music",
+    tags: ["Indoor", "Large Crowd", "Music", "Social", "High Energy"],
+    date: "2026-06-20",
+    location: "Pune",
+    lat: 18.5089,
+    lng: 73.8259,
+    price: "Paid",
+    eventType: "Party",
+    image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    host: { id: "h13", name: "Ankita Joshi", avatar: "https://i.pravatar.cc/150?u=h13" }
+  },
+  {
+    id: 14,
+    title: "Pune Startup Founders Mixer",
+    description: "Network with early-stage founders, angel investors, and mentors in Pune's booming startup ecosystem. Lightning pitches and open Q&A.",
+    category: "Networking",
+    tags: ["Indoor", "Medium", "Networking", "Analytical", "Social", "Moderate"],
+    date: "2026-07-12",
+    location: "Pune",
+    lat: 18.5642,
+    lng: 73.9145,
+    price: "Free",
+    eventType: "Conference",
+    image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    host: { id: "h14", name: "Vikram Pawar", avatar: "https://i.pravatar.cc/150?u=h14" }
   }
 ];
 
