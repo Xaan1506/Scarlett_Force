@@ -146,7 +146,7 @@ export const mockEvents = [
     lng: 73.8554,
     price: "Free",
     eventType: "Meetup",
-    image: "https://images.unsplash.com/photo-1455390582262-044cdead27d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    image: "/pune-photography.jpg",
     host: { id: "h10", name: "Rahul Joshi", avatar: "https://i.pravatar.cc/150?u=h10" }
   },
   {
